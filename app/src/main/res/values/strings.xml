@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">bottomnav</string>
+    <string name="home">Home</string>
+    <string name="setting">Setting</string>
+    <string name="profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello Home fragment</string>
+    <string name="hello_profile_tab">Hello Profile Tab</string>
+    <string name="setting_tab">Setting Tab</string>
+
+    <style name="CustomToolbarStyle" parent="Widget.MaterialComponents.Toolbar">
+        <item name="titleTextAppearance">@style/CustomToolbarTitle</item>
+    </style>
+
+    <style name="CustomToolbarTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/white</item>  <!-- Change text color -->
+        <item name="android:textSize">20sp</item>  <!-- Change text size -->
+        <item name="android:fontFamily">sans-serif-medium</item> <!-- Change font -->
+    </style>
+
+</resources>

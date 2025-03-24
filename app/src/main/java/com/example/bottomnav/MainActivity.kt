@@ -5,6 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.bottomnav.databinding.ActivityMainBinding
 
+/// AppCompatActivity is one library that it provide backward compatibility that render the old screen into the new screen\
+
+///Since AppCompatActivity is a subclass of Activity, it follows the standard activity lifecycle:
+//
+//onCreate() – Called when the activity is first created.
+//onStart() – Called when the activity becomes visible.
+//onResume() – Called when the activity starts interacting with the user.
+//onPause() – Called when the activity goes into the background.
+//onStop() – Called when the activity is no longer visible.
+//onDestroy() – Called when the activity is destroyed.
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,11 +43,16 @@ class MainActivity : AppCompatActivity() {
     private fun replaceFragment(fragment: Fragment) {
         //supportFragmentManager is a built-in property in AppCompatActivity, which provides access to the FragmentManager.
         //   responsible for adding, removing, replacing, and managing fragments in an activity.
+        //FragmentManager is the class responsible for performing actions on your app's fragments, such as adding, removing, or replacing them and adding them to the back stack.
+        /// the host activity is responsible for the supportFragmentManager whereas the  host fragment and child fragment has the parentFragmentManger and childFragementManager
+
         val fragementManger = supportFragmentManager
+
+
         val fragmentTransaction = fragementManger.beginTransaction()
         //This line starts a FragmentTransaction, which is necessary to perform operations on fragments.
         //beginTransaction() creates a new transaction, allowing you to make changes like adding, removing, or replacing fragments before committing them.
-        
+
         fragmentTransaction.replace(
             R.id.frame_layout,
             fragment
